@@ -8,5 +8,5 @@ function sortUsersBy(key, dataObject) {
 		return ((x > y) ? -1 : ((x < y) ? 1 : 0));
 	});
 }
-dataFile = sortUsersBy('repos', dataFile);
+dataFile = sortUsersBy('followers', dataFile);
 fs.appendFileSync('sortedUserData.json', JSON.stringify(dataFile));
